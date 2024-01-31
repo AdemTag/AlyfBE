@@ -1,0 +1,81 @@
+mkdir cree un dossier
+cd nomDuDossier pour y acceder
+git status pour voir le status du projet
+git add . ou git add all-- pour ajouter tout le dossier
+git add nomDeFichier pour un seul fichier 
+git commit -m 'message du commit' pour commité un ou plusieurs fichiers
+pour connaitre la branche sur laquelle on est git branch et met une etoile a coté de la branche active
+git add "*.html" ajoutera tout les fichiers avec l'extension html
+tout les fichiers dans le .gitignore ne sont pas montrer dans la commande git status
+git log affiche tout les commits effectuer dans le projet taper q pour mettre fin a la pagination
+git log -n1 affiche le dernier commit effectué
+git log -p file_name permet de suivre les commits d'un fichier bien précis
+git branch permet d'afficher toute les branches
+git branch nomDeBranche permet de crée une nouvelle branche sans la définir comme branche active
+pour supprimer une branche sur github en ligne de commande : git push origin --delete nomDeLaBranche
+git checkout -b nomDeBranche crée une nouvelle branche du nom donné et la défini comme branche active
+git checkout nomDeBranche permet de switcher sur la branche voulue
+git branch -d nomDeBranche permet de supprimer une branche
+git clone tp-git tp-git-clone permet de cloner un projet 
+pour ignorer un dossier dans un fichier ajouter dans gitIgnore 
+/NomDuDossier 
+git commit -am (add + message) 'ajout d'un titre'// a condition que le fichier a déja ete ajouter une 1ere fois on peut utiliser cette commande pour combiner les commandes add et message
+git log --oneline permet de log les commits avec seulement l'id et le nom de commit
+git merge nomDeLaBrancheAMerge fusionne la branche avec la branche sur laquelle on se trouve
+clear permet de vider la console
+npm install ungit install le package ungit qui est l'equivalent de gitgraphe qui offre une version graphique de nôtre environnement git
+modifier le message du dernier commit déjà existant mais pas encore push :
+git commit --amend -m "added password regexp control on page signInScreen"
+
+
+
+_______________________________________________________________________________________________
+DEPOT DISTANT (remote)
+
+mettre a jour un depot distant a partir d'un depot local
+git remote /git remote -v permet d'afficher les depots distant
+git init --bare permet de crée un depot distant(capable detre partager par plusieur appli ou dev)
+git remote add nomDuRepo cheminDuDossier exemple : 
+git remote add tp-repo-remote 'C:\Users\Desktop\depot_remote'
+permet d'interfacer avec un dossier distant 
+
+mettre a jour un depot local a partir d'un depot distant 
+git pull nomDuDossier nomDeLaBranch
+
+mkdir clone-tp //cloner un dossier
+git clone cheminDuDossier nomDuClone exemple : 
+git clone C:\Users\Desktop\depot_remote clone-tp1 //cree un clone de depot remote nommé clone-tp-1
+pour crée un fichier et l'ouvrir tapper : 
+(code nomDuDossier ,touch permet de crée sans l'ouvrir)
+git push origin master permet d' envoyer les fichiers du repo local vers le repository distant
+git pull permet de recuperer les dernieres modifs distantes du projet et les fusionne dans la branche courantes
+git stash permet de mettre de coté toutes les modification effectué entre un commit et avant le prochain commit les fichiers a stash doivent obligatoirement être add afin de pouvoir etre stash
+git stash list permet de retourner la liste de tout les stash effectuer dans le projet
+git stash show stash@{0} permet d'afficher un stash specifique contenu dans l'index entre {}
+
+pour interfacer un projet local avec un depo distant github 
+
+crée un projet distant github dans le navigateur sur github
+tapper ctrl maj p pour ouvrir le champ de saisie dans vscode
+choisir git Add remote
+tapper la commande remote add origin https://github.com/m2i_Github_Course.git
+si on crée un fichier directement via l'interface github on peut le récuperer 
+via la commande suivante : 
+git pull origin nomDeLaBranche //git pull origin master
+
+plugin gitLens / gitGraph
+____________________________________________________________________________
+GESTION DE CONFLITS
+
+avoir plusieur projet qui taff avec le meme repo distant
+pour generer un conflit demander au dev du projet 1 de changer une ligne 
+et de push 
+ensuite autre dev projet 2 change la meme ligne de code et essaie de push
+le systeme retourn une erreur de conflit 
+il faudra ensuite choisir la version a garder
+vscode propose un gestionnaire de conflits
+
+ 
+
+
+
